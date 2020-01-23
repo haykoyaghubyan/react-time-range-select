@@ -6,7 +6,7 @@ Installation
 -----
 
 ```
-npm install react-time-range-select
+npm install react-time-range-select --save
 ```
 
 Dependencies
@@ -39,17 +39,17 @@ class HomeComponent extends React.Component {
 
   render() {
     return (
-      <TimeRange
+      <TimeRangeSelect
         startTime={this.state.startTime}
         endTime={this.state.endTime}
-        use24Hours
+        mode24Hours
         onChangeStart={this.changeStartTime}
         onChangeEnd={this.changeEndTime}
       />
     );
   }
 }
-export default TimePicker;
+export default Home;
 ```
 
 Component Props
@@ -65,12 +65,16 @@ Component Props
 | `className` | string | undefined | It's for handling custom styling of the component. |
 | `minuteIncrement` | Number | 30 | Defines the increments in time that should appear in the select. Increments must be one of these `1, 2, 5, 10, 15, 20, 30, 60` minutes. |
 | `sameIsValid` | boolean | true | If both the start and end times are the same. |
-| `onClick` | function | undefined | Return function that is called when one of the time select options is clicked. |
-| `onChange` | function | undefined | Return function that is called when one of the values in the time select changes. |
+| `onClick` | function | undefined | Function that is called when one of the time select options is clicked. |
+| `onChange` | function | undefined | Function that is called when one of the values in the time select changes. |
 | `showErrors` | boolean | true | Display an error message when the input times are invalid. |
 | `equalTimeError` | string | "Please enter a valid time. Start and End times cannot be the same." | Error is rendered when both start and time values are the same, and this is considered invalid when `sameIsValid={true}`|
 | `endTimeError` | string | "Please enter a valid time. End time cannot be before start time." | Error string that is showing when the selected end time is before the start time.|
-| `onStartTimeClick` | function | undefined | Return function that is called when the start time select is clicked. |
-| `onStartTimeChange` | function | undefined | Return function that is called when the start time select value is changed. |
-| `onEndTimeClick` | function | undefined | Return function that is called when the end time select option is clicked. |
-| `onEndTimeChange` | function | undefined | Return function that is called when the end time select value is changed. |
+| `onStartTimeClick` | function | undefined | Function that is called when the start time select is clicked. |
+| `onStartTimeChange` | function | undefined |Function that is called when the start time select value is changed. |
+| `onEndTimeClick` | function | undefined | Function that is called when the end time select option is clicked. |
+| `onEndTimeChange` | function | undefined |Function that is called when the end time select value is changed. |
+
+# License
+
+MIT
