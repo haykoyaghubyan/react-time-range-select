@@ -1,0 +1,35 @@
+#react-time-range {
+  padding: 5px;
+}
+
+#react-time-range .component {
+  display: inline;
+  overflow: auto;
+  padding: 5px;
+}
+
+#react-time-range select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 10px 15px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #009688;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+#react-time-range select:focus{
+  outline: none;
+  border-bottom: 3px solid #009688;
+}
+
+#react-time-range .component .label {
+  padding-right: 10px;
+}
+
+#react-time-range .error {
+  color: red;
+  padding: 5px;
+}
