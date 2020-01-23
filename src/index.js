@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { createTimeObjects, changeTimeObject } from "./time";
 import "./styles.css";
 
-const TimeRange = props => {
+const TimeRangeSelect = props => {
   const initialState = {
     startTimeValue: "",
     startTimeIncrement: [],
@@ -82,7 +82,7 @@ const TimeRange = props => {
   );
 };
 
-TimeRange.defaultProps = {
+TimeRangeSelect.defaultProps = {
   mode24Hours: false,
   useCalendarChildren: false,
   sameIsValid: true,
@@ -98,7 +98,7 @@ TimeRange.defaultProps = {
     "Please enter a valid time. End time cannot be before start time."
 };
 
-TimeRange.propTypes = {
+TimeRangeSelect.propTypes = {
   mode24Hours: PropTypes.bool,
   startLabel: PropTypes.string,
   endLabel: PropTypes.string,
@@ -118,4 +118,4 @@ TimeRange.propTypes = {
   onEndTimeChange: PropTypes.func
 };
 
-export default TimeRange;
+export default TimeRangeSelect;
