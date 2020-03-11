@@ -18,7 +18,7 @@ Usage
 -----
 
 ```
-import TimeRangeSelect from "./react-time-range-select";
+import TimeRangeSelect from "react-time-range-select";
 
 class HomeComponent extends React.Component {
   constructor(props) {
